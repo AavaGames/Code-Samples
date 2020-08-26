@@ -1,2 +1,2 @@
-# CodeExamples
-Code examples from various projects written by Philip Fertsman.
+# Code Samples
+Code samples from various projects written by Philip Fertsman.
