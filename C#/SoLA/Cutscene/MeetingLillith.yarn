@@ -1,0 +1,148 @@
+title: MeetingLillith
+tags: 
+---
+
+<<showCinematicBars 150 0.5>>
+<<playerSetState Cutscene>>
+<<playerMoveToX 25.5 false>>
+
+    Lillion: Lillith!
+
+<<npcMoveToX Lillith 27.5 true 7>>
+
+    Lillith: Lilly!
+
+    Lillion: *Sigh* I'm so glad to find you!
+
+    Lillith: Oh me too... Do you know what's going on? We were all on the ship and now here? How is this even possible, it's like a dream.
+
+    Lillion: I don't know, I'm just as lost as you. Has anything else strange happened to you?
+
+    Lillith: Just the odd statue and my coat disappearing in front of my eyes.
+
+<<if $TempleFlags_SawCoatVanish is true>>
+    Lillion: Mine too! I found mine in the room behind me, I think yours is there too.
+<<else>>
+    Lillion: Whoa, I think I saw it in the room behind me.
+<<endif>>
+
+    Lillith: The outside looks just like Earth, forests, lakes, mountains. Is that where we are?
+
+    Lillion: No I don't think so. I've seen a city but it's unlike any on earth. We're somewhere else, somewhere alien. 
+    Lillion: Yet I was just in a room with a vending machine with snacks from Earth. I think we were put here by something... or someone.
+
+    Lillith: I guess that's means our mission was a success huh. We're breathing aren't we? It's a habitable planet. 
+    Lillith: But how did we get here? Where's the ship? How do we talk to Earth? Are we even in the same solar system or... much further away?
+
+    Lillion: I don't know and I'm scared. But so far I've been able to press on, even with all the obstacles in my way. I think I've also died, but I always come back. Time itself seems to rewind.
+
+    Lillith: What? Y-you've died?
+
+    Lillion: I'm also jumping through time, I think. Look for yourself.
+
+<<hideCinematicBars 0.5>>
+<<playerSetState Control>>
+<<playerTetherToX 25.5 3>>
+
+//If player jumpswitches and leaves ENDING 2, Lillith will be very worried once you meet her again
+<<set $TempleFlags_MeetingLillithEnding to 2>>
+
+//Trigger listener
+<<listener showingJumpSwitch>>
+===
+
+
+title: PlayerJumpSwitched
+tags: 
+---
+//Player jumpswitched and returned to show Lillith
+<<showCinematicBars 150 0.5>>
+<<playerSetState Cutscene>>
+<<playerMoveToX 25.5 false>>
+
+    Lillith: Woah! You just disappeared then <color=red>a-appeared</color>!
+
+    Lillion: Yeah I think I move to the future. This place is covered in greenery and outside there's a city behind the mountains. I wouldn't have been able to make it this far without this... ability.
+
+    Lillith: Oh my God. Just who put us here, they are so much more advanced than us.
+
+    Lillion: Yeah, they are... But all we can do right now is move forward, they must be watching us. There's gotta be a reason we are here. Are there any ways out of that room you're in?
+
+    Lillith: Yeah there's a staircase in the direction you're standing.
+
+    Lillion: Check it, it might lead to where I just was.
+
+    Lillith: Okay be right back.
+
+<<hideCinematicBars 0.5>>
+<<playerSetState Control>>
+<<playerTetherToX 25.5 3>>
+
+//If player jumpswitches and leaves ENDING 3
+<<set $TempleFlags_MeetingLillithEnding to 3>>
+
+//Trigger listener
+<<listener lillithMovesToIntermission>>
+<<npcMoveToX Lillith 0 true 10>>
+===
+
+
+
+title: PlayerWaited
+tags: 
+---
+//Player sat and waiting for Lillith to return
+<<showCinematicBars 150 0.5>>
+<<playerUnTether>>
+<<playerSetState Cutscene>>
+
+<<if $LillithSawEarlyJumpSwitch is true>>
+    [[PlayerWaitedAndJumpSwitched]]
+<<else>>
+    [[PlayerWaitedCont]]
+<<endif>>
+===
+
+
+
+title: PlayerWaitedAndJumpSwitched
+tags: 
+---
+//Player jump switched back to Lillith timeline once she returned
+    Lillith: Jeez that's freaky.
+
+    Lillion: Sorry, got bored. 
+    
+    [[PlayerWaitedCont]]
+===
+
+
+
+title: PlayerWaitedCont
+tags: 
+---
+    Lillith: I saw the vending machine you were talking about and a giant door.
+
+<<playerMoveToX 21.5 true 7>>
+
+<<if $TempleFlags_ArtifactTwo is true>>
+    Lillion: There's two sockets on that door, like two keys. I only saw two paths so I think both hold one key. I have one already!
+<<else>>
+    Lillion: There's two sockets on that door, like two keys. I only saw two paths so I think both hold one key.
+<<endif>>
+    Lillion: The door's close behind me so I need to keep moving forward, it probably wraps back around. Wait for me in there Lillith.
+
+    Lillith: Okay. Be careful. See you soon Lilly.
+
+    Lillion: See ya soon.
+
+<<hideCinematicBars 0.5>>
+<<playerSetState Control>>
+
+<<set $TempleFlags_MeetingLillithEnding to 4>>
+
+<<npcMoveToX Lillith 0 true>>
+===
+
+
+
