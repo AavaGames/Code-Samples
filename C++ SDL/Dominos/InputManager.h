@@ -2,8 +2,8 @@
 //  InputManager.h
 //  SDL_Tutorial
 //
-//  Created by Philip Fertsman on 2020-01-15.
-//  Copyright © 2020 Philip Fertsman. All rights reserved.
+//  Created by Aava Fertsman on 2020-01-15.
+//  Copyright © 2020 Aava Fertsman. All rights reserved.
 //
 
 #ifndef __INPUTMANAGER_H
