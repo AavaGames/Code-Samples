@@ -1,5 +1,5 @@
 # Code Samples
-Code samples from various projects written by Philip Fertsman.
+Code samples from various projects written by Aava Fertsman.
 
 C#
 
