@@ -3,9 +3,9 @@ Code samples from various projects written by Aava Fertsman.
 
 C# Unity
 
-- <b>Cardium</b>
+- <b>Fishnet PvP Character State Machine</b>
 
-    - Client-side predicted player state machine.
+    - Client-side predicted player state machine using Fishnet
 
 - <b>SoLA - Windows, Mac, Linux</b>
 
@@ -16,6 +16,13 @@ C# Unity
 - <b>Movement FPS (WIP) - Windows, Mac, Linux</b>
 
     - Created a fluid movement controller with sliding, wall running / jumping, an aerial ground pound and a projectile / hitscan weapon system. Includes QoL features such as jump input buffering.
+
+C 
+
+- <b>Tyalband</b>
+
+    - A distance/flood map for a 2D grid used in a traditional ASCII roguelike for the Playdate.
+
     
 C++ w/ SDL
 
