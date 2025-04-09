@@ -17,6 +17,11 @@ C# Unity
 
     - Created a fluid movement controller with sliding, wall running / jumping, an aerial ground pound and a projectile / hitscan weapon system. Includes QoL features such as jump input buffering.
 
+- <b>Untitled Rhythm Game - Android, IOS</b>
+
+    - Designed and collaborated with team members on various game features.
+    - Programmed gameplay, level editor, game manager/scene transitioning, bluetooth calibration, and supervised other team members code.
+
 C 
 
 - <b>Tyalband</b>
